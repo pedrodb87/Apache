@@ -1,8 +1,20 @@
 - hosts: all
+  vars:
+    php_version: 71
+    # db_name: "wordpress"
+    # db_user: "wpuser"
+    # db_password: "mypassword"
+  tasks:
+  - name: Disable SELinux
+    selinux:
+      state: disabled
   tasks:
   - name: Include Apache
     import_role:
       name: apache-role
-  - name: Include Wordpress role
+  - name: Include php role
     import_role:
-      name: wordpress-role  
+      name: php-role  
+  - name: Include wordpress role
+    import_role:
+      name: wordpress-role      

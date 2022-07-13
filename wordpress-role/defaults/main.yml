@@ -1,2 +1,4 @@
 ---
-# defaults file for wordpress-role
+db_name: "mydb"
+db_user: "admin"
+db_password: "password"
