@@ -1,4 +1,4 @@
----
+
 # tasks file for wordpress-role
 ---
 - name: Install unzip
@@ -17,10 +17,10 @@
   args:
     creates: /var/www/html/index.php
 
-- name: Copy wp-config.php file
-  template:
-    src: wp-config.php.j2
-    dest: /var/www/html/wp-config.php
+# - name: Copy wp-config.php file
+#   template:
+#     src: wp-config.php.j2
+#     dest: /var/www/html/wp-config.php
 
 - name: Recursively change ownership of a directory
   file:

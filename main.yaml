@@ -3,4 +3,6 @@
   - name: Include Apache
     import_role:
       name: apache-role
-    
+  - name: Include Wordpress role
+    import_role:
+      name: wordpress-role  
